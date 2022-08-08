@@ -51,7 +51,7 @@ The image below shows that all variables are highly correlated. All of them are 
   <img src="https://user-images.githubusercontent.com/90649106/183266103-51389223-9890-4147-8d3c-d0fade62b23f.png" width="800" >
 </p>
   
-Furthermore, the image velow shows that Retail, Parks, Workplaces and Transit, show a very similar tendency among them. The grocery and pharmacy sector show a slightly higher mobility, and the residential mobility shows an exactly opposing tendency to the rest. In addition, overall Pearson correlation is that of 0.85 among all indicators.
+Furthermore, the image below shows that Retail, Parks, Workplaces and Transit, show a very similar tendency among them. The grocery and pharmacy sector show a slightly higher mobility, and the residential mobility shows an exactly opposing tendency to the rest. In addition, overall Pearson correlation is that of 0.85 among all indicators.
 ```
 overall_pearson_r = series.corr().iloc[0,1]
 r, p = stats.pearsonr(series.dropna()['retail_and_recreation_percent_change_from_baseline'], series.dropna()['grocery_and_pharmacy_percent_change_from_baseline'])
