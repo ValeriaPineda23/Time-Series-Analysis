@@ -210,7 +210,7 @@ plt.show()
   <img src="https://user-images.githubusercontent.com/90649106/183442903-9f2dc9bb-5970-4afa-9b17-6954a60b8947.png" >
 </p>
 
-Next, we applied MA (Moving Average), AR (Auto-Regressive), and ARIMA (Auto-Regressive Integrated Moving Average) models. These were computed using the ARIMA function from the *statsmodels.tsa.arima_model* library in Python. The parameters established ($p, d, q$) and the results for each model appear in the next table and graphs. 
+Next, we applied MA (Moving Average), AR (Auto-Regressive), and ARIMA (Auto-Regressive Integrated Moving Average) models. These were computed using the ARIMA function from the *statsmodels.tsa.arima_model* library in Python. The parameters established ( $p, d, q$ ) and the results for each model appear in the next table and graphs. 
 
 Model|Parameters (p,d,q)|Training set (RMSE)|Test set (RMSE)
 --- | --- | --- | --- 
@@ -239,3 +239,10 @@ Day|Real value|Prediction
 
 
 The predictions using AR presented a RMSE of 13.44 for the test set. This quantity means that, on average, the predictions differ from the actual value by 13 units. However, we can see that the error is biased by the predictions of 16/11/2020. This date appears to be an outlier, as it does not follow a typical pattern with respect to the rest of the time series.
+
+# Conclusion
+The correlation analysis between the mobility indicators allowed us to know if there exists a dependency among them. In this case, we can conclude that if people have an increasing presence in their homes, they will not have a high presence in other areas.
+
+Moreover, we visualized the trend and seasonality of each indicator, from wich we conclude that there exists a highly negative trend for the first two months in almost all indicators (except for the Residential mobility, which shows a positive trend). In addition, there is a seasonality of 7, 14, and 21 days, which means that the pattern repeats in a weekly form. Finally, we subtracted a time shift from the current time to avoid a non-stationary behavior.
+
+Using the previous information, we developed an Auto-Regressive model that could predict Workplace mobility for the last seven days with an RMSE of 6.32 for the training set and 13.44 in the test set.
