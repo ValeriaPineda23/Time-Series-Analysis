@@ -101,6 +101,9 @@ for i in data.columns:
         
         plt.show()
 ```
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/90649106/183454178-9668596f-ddc3-4046-8265-07fce223f7de.png">
+</p>
 
 The graphic results show that all the indicators convey a particular trend in the first two months. For example, the Residential Mobility Indicator shows a steep increase and then begins to decrease and stabilize at the end. On the other hand, the rest of the indicators present a steep decrease in the first two months, and for the rest of the year, there appears to be a slightly increasing tendency. There also appears to exist a consistent seasonality every week and every two weeks.
 
@@ -136,7 +139,7 @@ for i in data.columns:
         test_stationarity(data[i])
 ```
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/90649106/183440623-5def1f09-e5c0-45ac-914d-d8a89986b88d.png" width="800" >
+  <img src="https://user-images.githubusercontent.com/90649106/183440623-5def1f09-e5c0-45ac-914d-d8a89986b88d.png" width="700" >
 </p>
   
 So, we proceeded to subtract the shifted values from the current values. The result shows that all indicators present a more consistent rolling mean with this subtraction.
