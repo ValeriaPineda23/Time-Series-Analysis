@@ -1,6 +1,8 @@
 # Time Series Analysis
 Analyzing Time Series of the Google Mobility Report of Mexico during COVID-19
 
+Analyzed trends, seasonality, and stationarity behaviors from the Google Mobility Report of Mexico, during COVID-19. Using the information from the analysis, we developed an Auto-Regressive model that could predict Workplace mobility for a week of November 2020 with an RMSE of 6.32 for the training and 13.44 in the test set. This quantity means that, on average, the predictions differ from the actual value by only 13 units.
+
 ## Data Preprocessing
 We performed data cleaning tasks initially, such as variable selection, data engineering, and handling missing data. 
 
